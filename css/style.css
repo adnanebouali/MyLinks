@@ -41,7 +41,8 @@ body {
   color: white;
 }
 .mylinks .container h1 {
-  margin: 30px auto;
+  margin-top: 25px;
+  margin-bottom: 0;
   font-size: 30px;
   opacity: 0;
   animation: Animx 1s ease 0.5s normal forwards;
@@ -50,6 +51,25 @@ body {
   0% {
     opacity: 0;
     transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.mylinks .container q {
+  font-size: 17px;
+  background-color: rgb(220, 226, 255);
+  display: block;
+  opacity: 0;
+  animation: Animq 1s ease 0.5s normal forwards;
+  margin: 8px auto 25px auto;
+}
+@keyframes Animq {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
   }
 
   100% {
@@ -145,6 +165,9 @@ body {
 }
 
 @media (max-width: 480px) {
+  .mylinks .container q {
+    font-size: 13px;
+  }
   .mylinks .container .img img {
     width: 150px;
     height: 165px;
