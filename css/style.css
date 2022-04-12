@@ -3,6 +3,11 @@
   --maincolor: #fafafa;
 }
 
+img,
+.mylinks,
+a {
+  filter: invert(100%);
+}
 body {
   background-color: var(--maincolor);
 }
@@ -86,7 +91,7 @@ body {
 }
 .mylinks .container .social img {
   width: 45px;
-  border: 1px solid black;
+  border: 3px solid black;
   box-shadow: 5px 5px 0 0 black;
   transition: 0.3s ease;
 }
@@ -175,8 +180,10 @@ body {
   }
   .mylinks .container .social img {
     width: 36px;
+    border: 2.3px solid black;
   }
   .mylinks .container .mytools a {
+    border: 2.3px solid black;
     font-size: 19px;
   }
 }
