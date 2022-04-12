@@ -3,11 +3,6 @@
   --maincolor: #fafafa;
 }
 
-img,
-.mylinks,
-a {
-  filter: invert(100%);
-}
 body {
   background-color: var(--maincolor);
 }
