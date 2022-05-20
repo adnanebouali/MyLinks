@@ -17,6 +17,10 @@ body {
   text-align: center;
   padding: 30px 20px;
 }
+.mylinks .container .img {
+  display: block;
+  transition: transform 0.1s;
+}
 
 .mylinks .container .img img {
   width: 230px;
@@ -36,7 +40,6 @@ body {
   }
 }
 
-.mylinks .container .img img:hover,
 .mylinks .container a.mytools:hover,
 .mylinks .container .social img:hover {
   box-shadow: 0 0 0 0;
