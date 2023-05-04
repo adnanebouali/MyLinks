@@ -152,7 +152,7 @@ a {
 }
 .mylinks .container .social img {
   width: 45px;
-  border: 3px solid black;
+  border: 3px solid var(--boxshadow);
   box-shadow: 5px 5px 0 0 var(--boxshadow);
   transition: 0.3s ease;
   -webkit-transition: 0.3s ease;
@@ -281,7 +281,7 @@ a {
 
   .mylinks .container .social img {
     width: 36px;
-    border: 2.3px solid var(--textcolor);
+    border: 2.3px solid black;
   }
 
   .mylinks .container a.mytools {
