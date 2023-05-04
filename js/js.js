@@ -104,3 +104,10 @@ function getRandomColor() {
 window.onload = function () {
   getQuote();
 };
+
+const darkModeBtn = document.querySelector(".darkModeToglle");
+darkModeBtn.addEventListener("click", toggleDarkMode);
+
+function toggleDarkMode() {
+  document.documentElement.classList.toggle("dark-mode");
+}
