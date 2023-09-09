@@ -1,5 +1,8 @@
 const quoteElement = document.querySelector("#quote");
 
+let holdTimer;
+
+// Function to fetch and display a new quote
 function getQuote() {
   fetch("https://api.quotable.io/random")
     .then((response) => response.json())
@@ -13,6 +16,36 @@ function getQuote() {
         "Self-belief and hard work will always earn you success.";
     });
 }
+
+// Function to copy the quote to the clipboard
+function copyQuoteToClipboard() {
+  const textToCopy = quoteElement.textContent;
+  const textArea = document.createElement("textarea");
+  textArea.value = textToCopy;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textArea);
+}
+
+// Add mousedown event to start the hold timer
+quoteElement.addEventListener("mousedown", () => {
+  holdTimer = setTimeout(() => {
+    copyQuoteToClipboard();
+  }, 1000); // Adjust the duration (in milliseconds) as needed
+});
+
+// Add mouseup event to clear the hold timer
+quoteElement.addEventListener("mouseup", () => {
+  clearTimeout(holdTimer);
+});
+
+// Add a click event listener to generate a new quote on click
+quoteElement.addEventListener("click", getQuote);
+
+// Initial quote generation when the page loads
+getQuote();
+
 
 function getRandomColor() {
   const colors = [
