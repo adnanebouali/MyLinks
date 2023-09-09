@@ -153,6 +153,7 @@ a {
 }
 .mylinks .container .social img {
   width: 45px;
+  height: auto;
   border: 3px solid var(--boxshadow);
   box-shadow: 5px 5px 0 0 var(--boxshadow);
   transition: 0.3s ease;
