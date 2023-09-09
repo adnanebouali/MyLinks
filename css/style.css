@@ -121,6 +121,7 @@ a {
   margin: 8px auto 25px auto;
   width: fit-content;
   -webkit-animation: Animq 1s ease 0.5s normal forwards;
+  cursor: pointer;
 }
 
 @keyframes Animq {
