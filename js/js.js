@@ -47,3 +47,35 @@ darkModeBtn.addEventListener("click", toggleDarkMode);
 function toggleDarkMode() {
   document.documentElement.classList.toggle("dark-mode");
 }
+
+
+// -----
+// Check localStorage for dark mode preference when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+  const savedDarkModeEnabled = localStorage.getItem('darkModeEnabled');
+  if (savedDarkModeEnabled === 'true') {
+    enableDarkMode();
+  }
+});
+
+darkModeBtn.addEventListener("click", toggleDarkMode);
+
+function enableDarkMode() {
+  document.documentElement.classList.add("dark-mode");
+  // Save the preference to localStorage
+  localStorage.setItem('darkModeEnabled', 'true');
+}
+
+function disableDarkMode() {
+  document.documentElement.classList.remove("dark-mode");
+  // Save the preference to localStorage
+  localStorage.setItem('darkModeEnabled', 'false');
+}
+
+function toggleDarkMode() {
+  if (document.documentElement.classList.contains("dark-mode")) {
+    disableDarkMode();
+  } else {
+    enableDarkMode();
+  }
+}
